@@ -1,0 +1,36 @@
+name: eslint
+
+on:
+  push:
+    branches:
+      - feature/*
+      - fix/*
+      - develop
+
+jobs:
+  lint:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: setup yarn
+        run: npm install -g yarn
+
+      - name: Cache node modules
+        uses: actions/cache@preview
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: install
+        run: yarn install
+
+      - name: eslint
+        run: yarn lint --no-fix
