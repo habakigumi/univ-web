@@ -1,14 +1,117 @@
 <template>
   <div class="members">
     <h2 class="heading_main"><span class="heading__main-text">Members</span></h2>
+    <div class="members__member-wrapper">
+      <div class="members__member" v-for="(member, index) in members" :key="member.id" :class="`members__member_${mod(index)}`">
+        <div class="members__thumb"><img src="../assets/logo.png" class="members__thumb-image" :alt="member.name"/></div>
+        <div class="members__member-info">
+          <div class="members__id" :class="`members__id_${mod(index)}`">{{ member.id }}</div>
+          <div class="members__name"  :class="`members__name_${mod(index)}`">{{ member.name }}</div>
+          <div class="members__position" :class="`members__position_${mod(index)}`">{{ member.position }}</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { members } from '../utils/members'
 export default {
+  data () {
+    return {
+      members: members
+    }
+  },
+  methods: {
+    mod (index) {
+      return index % 2 ? 'even' : 'odd'
+    }
+  }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "src/stylesheets/variables";
+.members {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  &__member-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__member {
+    display: flex;
+    box-sizing: border-box;
+    width: 45%;
+    min-width: 380px;
+    max-height: 118px;
+    margin-bottom: 20px;
+    padding: 8px;
+    font-weight: 900;
+
+    &_odd {
+      background-image: url('../assets/member_bg.svg')
+    }
+
+    &_even {
+      background-image: url('../assets/member_bg_alt.svg')
+    }
+  }
+
+  &__thumb {
+    width: 168px;
+    line-height: 100%;
+  }
+
+  &__thumb-image {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__member-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__id {
+    &_odd {
+      color: $background_transparent;
+    }
+    &_even {
+      color: $sub;
+    }
+  }
+
+  &__name {
+    margin-left: 20%;
+    font-size: 36px;
+
+    &_odd {
+      color: $background;
+    }
+
+    &_even {
+      color: $black;
+    }
+  }
+
+  &__position {
+    align-self: end;
+
+    &_odd {
+      color: $background_transparent;
+    }
+
+    &_even{
+      color: $sub;
+    }
+  }
+}
 </style>
