@@ -31,6 +31,30 @@ header {
   align-items: center;
 }
 
+h1 {
+  position: relative;
+  padding-left: 11px;
+  margin-left: 50px;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-left: 5px solid $purple;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50%;
+  border-left: 5px solid $theme-color;
+}
+
 nav.menu  {
   font-size: 24px;
   font-weight: bold;
@@ -48,9 +72,5 @@ nav.menu  {
       }
     }
   }
-}
-
-h1 {
-  margin-left: 50px;
 }
 </style>
