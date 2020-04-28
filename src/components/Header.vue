@@ -43,6 +43,8 @@ nav.menu  {
     li {
       a {
         text-decoration: none;
+        padding-bottom: 3.25px;
+        border-bottom: 0.3px solid $sub;
       }
     }
   }
