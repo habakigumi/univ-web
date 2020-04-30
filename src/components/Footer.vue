@@ -27,6 +27,13 @@ footer {
     color: $sub;
     opacity: 0.4;
     text-align: center;
+    @media screen and (max-width: 767px) {
+      //スマホ用
+      font-size: 14px;
+      line-height: 20px;
+    }
+    font-size: 24px;
+    line-height: 35px;
   }
 }
 </style>
