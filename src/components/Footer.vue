@@ -1,5 +1,7 @@
 <template>
-  <footer></footer>
+  <footer>
+    <p>&copy;2020 藤原プロジェクト All Rights Reserved</p>
+  </footer>
 </template>
 
 <script>
