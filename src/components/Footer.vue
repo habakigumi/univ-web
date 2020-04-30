@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <hr />
     <p>&copy;2020 藤原プロジェクト All Rights Reserved</p>
   </footer>
 </template>
@@ -14,12 +15,16 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;900&display=swap");
 
 footer {
+  hr {
+    width: 100vw;
+  }
   p {
     font-family: Noto Sans JP;
     font-style: normal;
     font-weight: 900;
     color: $sub;
     opacity: 0.4;
+    text-align: center;
   }
 }
 </style>
