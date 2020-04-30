@@ -17,6 +17,8 @@ export default {
 footer {
   hr {
     width: 100vw;
+    height: 0px;
+    border: 1px solid rgba(104, 105, 99, 0.6); //$sub opacity 0.6
   }
   p {
     font-family: Noto Sans JP;
