@@ -19,7 +19,7 @@ footer {
     font-style: normal;
     font-weight: 900;
     color: $sub;
-    opacity: 0.6;
+    opacity: 0.4;
   }
 }
 </style>
