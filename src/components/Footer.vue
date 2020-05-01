@@ -13,11 +13,11 @@ footer {
   hr {
     width: 100vw;
     height: 0px;
-    border: 1px solid $background_transparent;
+    border: 1px solid $sub_transparent;
   }
   p {
     font-weight: 900;
-    color: $background_transparent;
+    color: $sub_transparent;
     text-align: center;
     @media screen and (max-width: 767px) {
       //スマホ用
