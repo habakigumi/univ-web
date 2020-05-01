@@ -18,14 +18,13 @@ footer {
   hr {
     width: 100vw;
     height: 0px;
-    border: 1px solid rgba(104, 105, 99, 0.6); //$sub opacity 0.6
+    border: 1px solid $background_transparent;
   }
   p {
     font-family: Noto Sans JP;
     font-style: normal;
     font-weight: 900;
-    color: $sub;
-    opacity: 0.4;
+    color: $background_transparent;
     text-align: center;
     @media screen and (max-width: 767px) {
       //スマホ用
