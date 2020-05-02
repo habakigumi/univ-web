@@ -13,7 +13,7 @@
           <li><a href="#" class="text_sub">Link</a></li>
         </ul>
       </div>
-      <div class="hamburger" v-else v-on:click="!isOpen">
+      <div id="hamburger" v-else v-on:click="toggleMenu">
         <span/>
       </div>
     </nav>
@@ -29,7 +29,7 @@ export default {
     }
   },
   methods: {
-    handleResize: function () {
+    handleResize () {
       this.windowSize = window.innerWidth
     }
   },
@@ -57,22 +57,22 @@ h1 {
   position: relative;
   padding-left: 11px;
   margin-left: 34px;
-}
 
-h1::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  border-left: 5px solid $purple;
-}
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    border-left: 5px solid $purple;
+  }
 
-h1::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 50%;
-  border-left: 5px solid $theme-color;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 50%;
+    border-left: 5px solid $theme-color;
+  }
 }
 
 nav.menu  {
@@ -96,7 +96,7 @@ nav.menu  {
     }
   }
 
-  div.hamburger {
+  #hamburger {
     position: relative;
     vertical-align: middle;
     width: 100%;
@@ -108,24 +108,24 @@ nav.menu  {
       height: 1px;
       margin-top: 11px;
       background: $sub;
-    }
 
-    span::before {
-      top: 7px;
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 1px;
-      background: $sub;
-    }
+      &::before {
+        top: 7px;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $sub;
+      }
 
-    span::after {
-      top: 14px;
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 1px;
-      background: $sub;
+      &::after {
+        top: 14px;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $sub;
+      }
     }
   }
 }
