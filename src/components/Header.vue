@@ -4,20 +4,43 @@
       <h1 class="text_sub">藤原プロジェクト2020</h1>
     </div>
     <nav class="menu">
-      <ul class>
-        <li><a href="#" class="text_sub">About</a></li>
-        <li><a href="#" class="text_sub">Character</a></li>
-        <li><a href="#" class="text_sub">Member</a></li>
-        <li><a href="#" class="text_sub">Activities</a></li>
-        <li><a href="#" class="text_sub">Link</a></li>
-      </ul>
+      <div class="horizontal" v-if="windowSize >= 980">
+        <ul class>
+          <li><a href="#" class="text_sub">About</a></li>
+          <li><a href="#" class="text_sub">Character</a></li>
+          <li><a href="#" class="text_sub">Member</a></li>
+          <li><a href="#" class="text_sub">Activities</a></li>
+          <li><a href="#" class="text_sub">Link</a></li>
+        </ul>
+      </div>
+      <div class="hamburger" v-else>
+        <span/>
+        <span/>
+        <span/>
+      </div>
     </nav>
   </header>
 </template>
 
 <script>
 export default {
-
+  data () {
+    return {
+      windowSize: window.innerWidth,
+      isOpen: false
+    }
+  },
+  methods: {
+    handleResize: function () {
+      this.windowSize = window.innerWidth
+    }
+  },
+  mounted () {
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', this.handleResize)
+  }
 }
 </script>
 
