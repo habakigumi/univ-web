@@ -15,8 +15,6 @@
       </div>
       <div class="hamburger" v-else>
         <span/>
-        <span/>
-        <span/>
       </div>
     </nav>
   </header>
@@ -80,18 +78,57 @@ h1::after {
 nav.menu  {
   font-size: 24px;
   font-weight: bold;
-  width: 40%;
+  width: 542px;
   margin-right: 24px;
-  ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    li {
-      a {
-        text-decoration: none;
-        padding-bottom: 3.25px;
-        border-bottom: 0.3px solid $sub;
+
+  div.horizontal {
+    ul {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+
+      li {
+        a {
+          text-decoration: none;
+          padding-bottom: 3.25px;
+          border-bottom: 0.3px solid $sub;
+        }
       }
+    }
+  }
+
+  div.hamburger {
+    position: relative;
+    vertical-align: middle;
+    margin-right: 17px;
+    width: 100%;
+    height: 17px;
+    cursor: pointer;
+    span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      color: $sub;
+      background: currentColor;
+    }
+
+    span::before {
+      top: 7px;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+    }
+
+    span::after {
+      top: 14px;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: currentColor;
     }
   }
 }
@@ -99,6 +136,10 @@ nav.menu  {
 @media screen and (max-width: $break-point) {
   h1 {
     font-size: 18px;
+  }
+
+  nav.menu {
+    width: 25px;
   }
 }
 </style>
