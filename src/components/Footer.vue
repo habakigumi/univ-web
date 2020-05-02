@@ -19,13 +19,18 @@ footer {
     font-weight: 900;
     color: $sub_transparent;
     text-align: center;
-    @media screen and (max-width: 767px) {
-      //スマホ用
+    font-size: 24px;
+    line-height: 35px;
+  }
+  @media screen and (max-width: $break-point) {
+    //スマホ用
+    p {
+      font-weight: 900;
+      color: $sub_transparent;
+      text-align: center;
       font-size: 14px;
       line-height: 20px;
     }
-    font-size: 24px;
-    line-height: 35px;
   }
 }
 </style>
