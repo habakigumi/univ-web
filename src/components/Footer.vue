@@ -7,7 +7,6 @@
 
 <style lang="scss" scoped>
 @import "../stylesheets/variables";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;900&display=swap");
 
 footer {
   hr {
@@ -25,9 +24,6 @@ footer {
   @media screen and (max-width: $break-point) {
     //スマホ用
     p {
-      font-weight: 900;
-      color: $sub_transparent;
-      text-align: center;
       font-size: 14px;
       line-height: 20px;
     }
