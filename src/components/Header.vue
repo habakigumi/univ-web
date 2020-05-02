@@ -5,7 +5,7 @@
     </div>
     <nav class="menu">
       <div class="horizontal" v-if="windowSize >= 980">
-        <ul class>
+        <ul>
           <li><a href="#" class="text_sub">About</a></li>
           <li><a href="#" class="text_sub">Character</a></li>
           <li><a href="#" class="text_sub">Member</a></li>
@@ -13,7 +13,7 @@
           <li><a href="#" class="text_sub">Link</a></li>
         </ul>
       </div>
-      <div class="hamburger" v-else>
+      <div class="hamburger" v-else v-on:click="!isOpen">
         <span/>
       </div>
     </nav>
@@ -80,14 +80,12 @@ nav.menu  {
   font-weight: bold;
   width: 542px;
   margin-right: 24px;
-
   div.horizontal {
     ul {
       padding: 0;
       display: flex;
       justify-content: space-between;
       list-style: none;
-
       li {
         a {
           text-decoration: none;
@@ -101,16 +99,15 @@ nav.menu  {
   div.hamburger {
     position: relative;
     vertical-align: middle;
-    margin-right: 17px;
     width: 100%;
-    height: 17px;
+    height: 25px;
     cursor: pointer;
     span {
       display: block;
       width: 100%;
       height: 1px;
-      color: $sub;
-      background: currentColor;
+      margin-top: 11px;
+      background: $sub;
     }
 
     span::before {
@@ -119,7 +116,7 @@ nav.menu  {
       content: "";
       width: 100%;
       height: 1px;
-      background: currentColor;
+      background: $sub;
     }
 
     span::after {
@@ -128,7 +125,7 @@ nav.menu  {
       content: "";
       width: 100%;
       height: 1px;
-      background: currentColor;
+      background: $sub;
     }
   }
 }
@@ -136,10 +133,21 @@ nav.menu  {
 @media screen and (max-width: $break-point) {
   h1 {
     font-size: 18px;
+    padding-left: 8px;
+    margin-left: 14px;
+  }
+
+  h1::before {
+    border-width: 3px;
+  }
+
+  h1::after {
+    border-width: 3px;
   }
 
   nav.menu {
     width: 25px;
+    margin-right: 7px;
   }
 }
 </style>
