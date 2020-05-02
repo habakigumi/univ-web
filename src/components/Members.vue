@@ -114,4 +114,16 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: $break-point) {
+  .members {
+    &__member-wrapper {
+      justify-content: center;
+    }
+    &__member {
+      max-width: 540px;
+      width: 90%;
+    }
+  }
+}
 </style>
