@@ -31,6 +31,11 @@ export default {
   methods: {
     handleResize () {
       this.windowSize = window.innerWidth
+    },
+    toggleMenu: function () {
+      this.isOpen = !this.isOpen
+      const hamburgerIcon = document.getElementById('hamburger')
+      hamburgerIcon.classList.add('active')
     }
   },
   mounted () {
