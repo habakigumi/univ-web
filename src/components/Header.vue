@@ -93,17 +93,19 @@ h1 {
   }
 }
 
-nav.menu  {
+nav.menu {
   font-size: 24px;
   font-weight: bold;
   width: 542px;
   margin-right: 24px;
+
   div.horizontal {
     ul {
       padding: 0;
       display: flex;
       justify-content: space-between;
       list-style: none;
+
       li {
         a {
           text-decoration: none;
@@ -122,6 +124,7 @@ nav.menu  {
       height: 25px;
       cursor: pointer;
       z-index: 99;
+
       span {
         display: block;
         width: 100%;
@@ -157,6 +160,7 @@ nav.menu  {
       background-color: $hamburger_background;
       width: 100vw;
       height: 100vh;
+
       ul {
         padding: 0;
         height: 100%;
@@ -166,6 +170,7 @@ nav.menu  {
         /*justify-content: center;*/
         flex-direction: column;
         list-style: none;
+
         li {
           width: 200px;
           margin-top: 20px;
