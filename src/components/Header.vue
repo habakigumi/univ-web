@@ -6,14 +6,14 @@
     <nav>
       <div class="menu" ref="menu">
         <ul>
-          <li><a href="#" class="text_sub">About</a></li>
-          <li><a href="#" class="text_sub">Character</a></li>
-          <li><a href="#" class="text_sub">Member</a></li>
-          <li><a href="#" class="text_sub">Activities</a></li>
-          <li><a href="#" class="text_sub">Link</a></li>
+          <li><a href="#" class="text_sub" @click="toggleMenu">About</a></li>
+          <li><a href="#" class="text_sub" @click="toggleMenu">Character</a></li>
+          <li><a href="#" class="text_sub" @click="toggleMenu">Member</a></li>
+          <li><a href="#" class="text_sub" @click="toggleMenu">Activities</a></li>
+          <li><a href="#" class="text_sub" @click="toggleMenu">Link</a></li>
         </ul>
       </div>
-      <div class="hamburger-icon" v-on:click="toggleMenu" ref="hamburgerIcon">
+      <div class="hamburger-icon" @click="toggleMenu" ref="hamburgerIcon">
         <span/>
         <span/>
         <span/>
@@ -26,6 +26,9 @@
 export default {
   methods: {
     toggleMenu: function () {
+      if (window.innerWidth > 979) {
+        return
+      }
       this.$refs.menu.classList.toggle('hamburger-open')
       this.$refs.hamburgerIcon.classList.toggle('close')
     }
