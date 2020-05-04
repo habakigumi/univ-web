@@ -79,8 +79,9 @@ h1 {
     content: "";
     position: absolute;
     left: 0;
-    height: 100%;
+    height: 82%;
     width: 5px;
+    bottom: 8%;
     background: $purple;
   }
 
@@ -88,8 +89,9 @@ h1 {
     content: "";
     position: absolute;
     left: 0;
-    height: 50%;
+    height: 42.55%;
     width: 5px;
+    top: 10%;
     background: $theme-color;
   }
 }
