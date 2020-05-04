@@ -16,6 +16,8 @@
       <div class="hamburger" v-else>
         <div id="hamburger-icon" v-on:click="toggleMenu">
           <span/>
+          <span/>
+          <span/>
         </div>
         <div class="hamburger-content" v-if="isOpen">
           <ul>
@@ -119,35 +121,47 @@ nav.menu {
   div.hamburger {
     #hamburger-icon {
       position: relative;
-      vertical-align: middle;
       width: 25px;
-      height: 25px;
+      height: 15px;
       cursor: pointer;
       z-index: 99;
 
       span {
-        display: block;
+        position: absolute;
         width: 100%;
         height: 1px;
-        margin-top: 11px;
         background: $sub;
 
-        &::before {
-          top: 7px;
-          position: absolute;
-          content: "";
-          width: 100%;
-          height: 1px;
-          background: $sub;
+        &:nth-of-type(1) {
+          top: 0;
         }
 
-        &::after {
-          top: 14px;
-          position: absolute;
-          content: "";
-          width: 100%;
-          height: 1px;
-          background: $sub;
+        &:nth-of-type(2) {
+          top: 7px;
+        }
+
+        &:nth-of-type(3) {
+          bottom: 0;
+        }
+      }
+
+      &.active {
+        height: 26px;
+        span {
+          background: $hamburger_text;
+          margin: 0;
+
+          &:nth-of-type(1) {
+            transform: translateY(12.5px) rotate(45deg);
+          }
+
+          &:nth-of-type(2) {
+            display: none;
+          }
+
+          &:nth-of-type(3) {
+            transform: translateY(-12.5px) rotate(-45deg);
+          }
         }
       }
     }
