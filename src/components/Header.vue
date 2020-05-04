@@ -184,10 +184,6 @@ nav {
         li {
           width: 200px;
           margin-top: 20px;
-          padding: 10px 0;
-          border: 1px solid $hamburger_text;
-          border-left: 0;
-          border-right: 0;
           text-align: center;
 
           &:nth-of-type(1) {
@@ -197,7 +193,11 @@ nav {
           a {
             display: block;
             width: 100%;
+            padding: 10px 0;
             color: $hamburger_text;
+            border: 1px solid $hamburger_text;
+            border-left: 0;
+            border-right: 0;
             text-decoration: none;
           }
         }
