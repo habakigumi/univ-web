@@ -14,7 +14,7 @@
         </ul>
       </div>
       <div class="hamburger" v-else>
-        <div id="hamburger-icon" v-on:click="toggleMenu">
+        <div id="hamburger-icon" v-on:click="toggleMenu" ref="hamburgerIcon">
           <span/>
           <span/>
           <span/>
@@ -47,8 +47,7 @@ export default {
     },
     toggleMenu: function () {
       this.isOpen = !this.isOpen
-      const hamburgerIcon = document.getElementById('hamburger-icon')
-      hamburgerIcon.classList.toggle('active')
+      this.$refs.hamburgerIcon.classList.toggle('close')
     }
   },
   mounted () {
@@ -145,7 +144,7 @@ nav.menu {
         }
       }
 
-      &.active {
+      &.close {
         height: 26px;
         span {
           background: $hamburger_text;
