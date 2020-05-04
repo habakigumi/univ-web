@@ -13,8 +13,19 @@
           <li><a href="#" class="text_sub">Link</a></li>
         </ul>
       </div>
-      <div id="hamburger" v-else v-on:click="toggleMenu">
-        <span/>
+      <div class="hamburger" v-else>
+        <div id="hamburger-icon" v-on:click="toggleMenu">
+          <span/>
+        </div>
+        <div class="hamburger-content" v-if="isOpen">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Character</a></li>
+            <li><a href="#">Member</a></li>
+            <li><a href="#">Activities</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
@@ -34,8 +45,8 @@ export default {
     },
     toggleMenu: function () {
       this.isOpen = !this.isOpen
-      const hamburgerIcon = document.getElementById('hamburger')
-      hamburgerIcon.classList.add('active')
+      const hamburgerIcon = document.getElementById('hamburger-icon')
+      hamburgerIcon.classList.toggle('active')
     }
   },
   mounted () {
@@ -68,7 +79,8 @@ h1 {
     position: absolute;
     left: 0;
     height: 100%;
-    border-left: 5px solid $purple;
+    width: 5px;
+    background: $purple;
   }
 
   &::after {
@@ -76,7 +88,8 @@ h1 {
     position: absolute;
     left: 0;
     height: 50%;
-    border-left: 5px solid $theme-color;
+    width: 5px;
+    background: $theme-color;
   }
 }
 
@@ -101,38 +114,82 @@ nav.menu  {
     }
   }
 
-  #hamburger {
-    position: relative;
-    vertical-align: middle;
-    width: 100%;
-    height: 25px;
-    cursor: pointer;
-    span {
-      display: block;
-      width: 100%;
-      height: 1px;
-      margin-top: 11px;
-      background: $sub;
-
-      &::before {
-        top: 7px;
-        position: absolute;
-        content: "";
+  div.hamburger {
+    #hamburger-icon {
+      position: relative;
+      vertical-align: middle;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      z-index: 99;
+      span {
+        display: block;
         width: 100%;
         height: 1px;
+        margin-top: 11px;
         background: $sub;
+
+        &::before {
+          top: 7px;
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: $sub;
+        }
+
+        &::after {
+          top: 14px;
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: $sub;
+        }
       }
+    }
 
-      &::after {
-        top: 14px;
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 1px;
-        background: $sub;
+    div.hamburger-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 98;
+      background-color: $hamburger_background;
+      width: 100vw;
+      height: 100vh;
+      ul {
+        padding: 0;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        /*justify-content: center;*/
+        flex-direction: column;
+        list-style: none;
+        li {
+          width: 200px;
+          margin-top: 20px;
+          padding: 10px 0;
+          border: 1px solid $hamburger_text;
+          border-left: 0;
+          border-right: 0;
+          text-align: center;
+
+          &:nth-of-type(1) {
+            margin-top: 78px;
+          }
+
+          a {
+            display: block;
+            width: 100%;
+            color: $hamburger_text;
+            text-decoration: none;
+          }
+        }
       }
     }
   }
+
 }
 
 @media screen and (max-width: $break-point) {
@@ -143,11 +200,11 @@ nav.menu  {
   }
 
   h1::before {
-    border-width: 3px;
+    width: 3px;
   }
 
   h1::after {
-    border-width: 3px;
+    width: 3px;
   }
 
   nav.menu {
