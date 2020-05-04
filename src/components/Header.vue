@@ -3,8 +3,8 @@
     <div class="project_name">
       <h1 class="text_sub">藤原プロジェクト2020</h1>
     </div>
-    <nav class="menu">
-      <div class="horizontal" v-if="windowSize >= 980">
+    <nav>
+      <div class="menu" ref="menu">
         <ul>
           <li><a href="#" class="text_sub">About</a></li>
           <li><a href="#" class="text_sub">Character</a></li>
@@ -13,21 +13,10 @@
           <li><a href="#" class="text_sub">Link</a></li>
         </ul>
       </div>
-      <div class="hamburger" v-else>
-        <div id="hamburger-icon" v-on:click="toggleMenu" ref="hamburgerIcon">
-          <span/>
-          <span/>
-          <span/>
-        </div>
-        <div class="hamburger-content" v-if="isOpen">
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Character</a></li>
-            <li><a href="#">Member</a></li>
-            <li><a href="#">Activities</a></li>
-            <li><a href="#">Link</a></li>
-          </ul>
-        </div>
+      <div class="hamburger-icon" v-on:click="toggleMenu" ref="hamburgerIcon">
+        <span/>
+        <span/>
+        <span/>
       </div>
     </nav>
   </header>
@@ -35,26 +24,11 @@
 
 <script>
 export default {
-  data () {
-    return {
-      windowSize: window.innerWidth,
-      isOpen: false
-    }
-  },
   methods: {
-    handleResize () {
-      this.windowSize = window.innerWidth
-    },
     toggleMenu: function () {
-      this.isOpen = !this.isOpen
+      this.$refs.menu.classList.toggle('hamburger-open')
       this.$refs.hamburgerIcon.classList.toggle('close')
     }
-  },
-  mounted () {
-    window.addEventListener('resize', this.handleResize)
-  },
-  beforeDestroy () {
-    window.removeEventListener('resize', this.handleResize)
   }
 }
 </script>
@@ -96,13 +70,13 @@ h1 {
   }
 }
 
-nav.menu {
+nav {
   font-size: 24px;
   font-weight: bold;
   width: 542px;
   margin-right: 24px;
 
-  div.horizontal {
+  div.menu {
     ul {
       padding: 0;
       display: flex;
@@ -119,55 +93,76 @@ nav.menu {
     }
   }
 
-  div.hamburger {
-    #hamburger-icon {
-      position: relative;
-      width: 25px;
-      height: 15px;
-      cursor: pointer;
-      z-index: 99;
+  div.hamburger-icon {
+    display: none;
+    position: relative;
+    width: 25px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 99;
 
-      span {
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        background: $sub;
+    span {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: $sub;
 
-        &:nth-of-type(1) {
-          top: 0;
-        }
-
-        &:nth-of-type(2) {
-          top: 7px;
-        }
-
-        &:nth-of-type(3) {
-          bottom: 0;
-        }
+      &:nth-of-type(1) {
+        top: 0;
       }
 
-      &.close {
-        height: 26px;
-        span {
-          background: $hamburger_text;
-          margin: 0;
+      &:nth-of-type(2) {
+        top: 7px;
+      }
 
-          &:nth-of-type(1) {
-            transform: translateY(12.5px) rotate(45deg);
-          }
-
-          &:nth-of-type(2) {
-            display: none;
-          }
-
-          &:nth-of-type(3) {
-            transform: translateY(-12.5px) rotate(-45deg);
-          }
-        }
+      &:nth-of-type(3) {
+        bottom: 0;
       }
     }
 
-    div.hamburger-content {
+    &.close {
+      height: 26px;
+
+      span {
+        background: $hamburger_text;
+        margin: 0;
+
+        &:nth-of-type(1) {
+          transform: translateY(12.5px) rotate(45deg);
+        }
+
+        &:nth-of-type(2) {
+          display: none;
+        }
+
+        &:nth-of-type(3) {
+          transform: translateY(-12.5px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $break-point) {
+  h1 {
+    font-size: 18px;
+    padding-left: 8px;
+    margin-left: 14px;
+  }
+
+  h1::before {
+    width: 3px;
+  }
+
+  h1::after {
+    width: 3px;
+  }
+
+  nav {
+    width: 25px;
+    margin-right: 7px;
+    div.menu {
+      display: none;
       position: absolute;
       top: 0;
       left: 0;
@@ -207,29 +202,14 @@ nav.menu {
           }
         }
       }
+      &.hamburger-open {
+        display: block;
+      }
     }
-  }
 
-}
-
-@media screen and (max-width: $break-point) {
-  h1 {
-    font-size: 18px;
-    padding-left: 8px;
-    margin-left: 14px;
-  }
-
-  h1::before {
-    width: 3px;
-  }
-
-  h1::after {
-    width: 3px;
-  }
-
-  nav.menu {
-    width: 25px;
-    margin-right: 7px;
+    div.hamburger-icon {
+      display: block;
+    }
   }
 }
 </style>
