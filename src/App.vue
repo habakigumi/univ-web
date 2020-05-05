@@ -46,6 +46,7 @@ html, body, #app {
   margin: 0;
   padding: 0;
   background-color: $background;
+  scroll-behavior: smooth;
 }
 
 #app {
