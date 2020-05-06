@@ -1,5 +1,5 @@
 <template>
-  <div class="characters">
+  <div class="characters" id="characters">
     <h2 class="heading_main"><span class="heading__main-text">Character</span></h2>
   </div>
 </template>
