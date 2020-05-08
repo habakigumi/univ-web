@@ -6,11 +6,11 @@
     <nav>
       <div class="menu" ref="menu">
         <ul>
-          <li><a href="#" class="text_sub" @click="toggleMenu">About</a></li>
-          <li><a href="#" class="text_sub" @click="toggleMenu">Character</a></li>
-          <li><a href="#" class="text_sub" @click="toggleMenu">Member</a></li>
-          <li><a href="#" class="text_sub" @click="toggleMenu">Activities</a></li>
-          <li><a href="#" class="text_sub" @click="toggleMenu">Link</a></li>
+          <li><a href="#about" class="text_sub" @click="toggleMenu">About</a></li>
+          <li><a href="#characters" class="text_sub" @click="toggleMenu">Character</a></li>
+          <li><a href="#members" class="text_sub" @click="toggleMenu">Member</a></li>
+          <li><a href="#activities" class="text_sub" @click="toggleMenu">Activities</a></li>
+          <li><a href="#links" class="text_sub" @click="toggleMenu">Link</a></li>
         </ul>
       </div>
       <div class="hamburger-icon" @click="toggleMenu" ref="hamburgerIcon">
