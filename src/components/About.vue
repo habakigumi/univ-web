@@ -21,6 +21,26 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "../stylesheets/variables";
+
+div.about-container {
+  display: flex;
+  margin-top: 51px;
+
+  div.img {
+    width: 523px;
+    height: 333px;
+    background: #c4c4c4;
+  }
+
+  div.sentence {
+    position: relative;
+    height: 333px;
+    margin-left: 110px;
+    h3 {
+      margin: 0;
+      font-size: 24px;
+    }
 
 </style>
