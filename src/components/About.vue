@@ -35,12 +35,40 @@ div.about-container {
   }
 
   div.sentence {
-    position: relative;
-    height: 333px;
+    display: flex;
+    flex-direction: column;
     margin-left: 110px;
+
     h3 {
       margin: 0;
       font-size: 24px;
     }
 
+    p {
+      margin: auto 0;
+    }
+  }
+}
+
+@media screen and (max-width: $break-point) {
+  div.about-container {
+    display: block;
+    border: 1px solid $sub;
+    margin-top: 31px;
+
+    div.img {
+      width: 100%;
+      height: 165px;
+    }
+
+    div.sentence {
+      margin: 0 auto;
+      width: 95%;
+
+      p {
+        margin-top: 15px;
+      }
+    }
+  }
+}
 </style>
