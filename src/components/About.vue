@@ -2,7 +2,7 @@
   <div class="about">
     <h2 class="heading_main"><span class="heading__main-text">About</span></h2>
     <div class="about-container">
-      <div class="img"></div>
+      <img src="../assets/logo.png" alt="logo">
       <div class="sentence">
         <h3 class="text_sub">プロジェクトについて</h3>
         <p class="text_black"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Fermentum in at curabitur dolor, metus, purus nulla
@@ -28,10 +28,8 @@ div.about-container {
   display: flex;
   margin-top: 51px;
 
-  div.img {
-    width: 523px;
-    height: 333px;
-    background: #c4c4c4;
+  img {
+    width: 333px;
   }
 
   div.sentence {
@@ -56,9 +54,8 @@ div.about-container {
     border: 1px solid $sub;
     margin-top: 31px;
 
-    div.img {
+    img {
       width: 100%;
-      height: 165px;
     }
 
     div.sentence {
