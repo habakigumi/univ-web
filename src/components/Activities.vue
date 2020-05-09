@@ -5,8 +5,8 @@
       <div
         class="activities__activity"
         v-for="(activity, index) in convertedActivities"
-        :key="`time-${activity.time}`"
-        :class="activityClass(index)"
+        :key="`time-${index}`"
+        :class="activityClass(activity.type, index)"
       >
         <div class="activities__time" :class="`activities__time_${activity.type}`">{{ activity.time }}</div>
         <div class="activities__activity-content" :class="activityContentClass(activity.type)" v-html="activity.content">
@@ -27,7 +27,6 @@ export default {
   computed: {
     convertedActivities () {
       const val = []
-      console.log(this.activities)
       this.activities.forEach(year => {
         val.push({ time: year.year, content: '', type: 'year' })
         year.activities.forEach(activity => {
@@ -38,8 +37,11 @@ export default {
     }
   },
   methods: {
-    activityClass (index) {
-      if (index === 0) return 'activities__activity_first'
+    activityClass (type, index) {
+      const styles = []
+      if (type === 'year') styles.push('activities__activity_year')
+      if (index === 0) styles.push('activities__activity_first')
+      return styles.join(' ')
     },
     activityContentClass (type) {
       if (type === 'year') return 'activities__activity-content_none'
@@ -63,6 +65,10 @@ export default {
     width: 100%;
     padding: 16px;
     margin: 16px 0;
+
+    &_year {
+      margin-top: -1px;
+    }
 
     &_first {
       margin-top: -38px;
@@ -128,7 +134,6 @@ export default {
         height: 140%;
         border-top: 1px solid $sub;
         border-bottom: 1px solid $sub;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
       }
 
