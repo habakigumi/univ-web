@@ -66,7 +66,6 @@ div.about-container {
 
       div.sentence {
         display: inline-block;
-        margin: 0 auto;
         text-align: left;
         p {
           margin-top: 15px;
