@@ -3,14 +3,16 @@
     <h2 class="heading_main"><span class="heading__main-text">About</span></h2>
     <div class="about-container">
       <img src="../assets/logo.png" alt="logo">
-      <div class="sentence">
-        <h3 class="text_sub">プロジェクトについて</h3>
-        <p class="text_black"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Fermentum in at curabitur dolor, metus, purus nulla
-          <br>
-          faucibus. Eu sit ultrices vulputate velit, habitant <br> faucibus tortor cras. Eu sed iaculis et potenti aliquam
-          <br>
-          dictum. Sed risus imperdiet eu leo sed.
-        </p>
+      <div class="sentence-outer">
+        <div class="sentence">
+          <h3 class="text_sub">プロジェクトについて</h3>
+          <p class="text_black"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Fermentum in at curabitur dolor, metus, purus nulla
+            <br>
+            faucibus. Eu sit ultrices vulputate velit, habitant <br> faucibus tortor cras. Eu sed iaculis et potenti aliquam
+            <br>
+            dictum. Sed risus imperdiet eu leo sed.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -27,18 +29,22 @@ div.about-container {
     width: 333px;
   }
 
-  div.sentence {
-    display: flex;
-    flex-direction: column;
+  div.sentence-outer {
     margin-left: 110px;
 
-    h3 {
-      margin: 0;
-      font-size: 24px;
-    }
+    div.sentence {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
 
-    p {
-      margin: auto 0;
+      h3 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      p {
+        margin: auto 0;
+      }
     }
   }
 }
@@ -53,12 +59,18 @@ div.about-container {
       width: 100%;
     }
 
-    div.sentence {
+    div.sentence-outer {
       margin: 0 auto;
       width: 95%;
+      text-align: center;
 
-      p {
-        margin-top: 15px;
+      div.sentence {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: left;
+        p {
+          margin-top: 15px;
+        }
       }
     }
   }
