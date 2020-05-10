@@ -108,6 +108,7 @@ html, body, #app {
 
   &__main-text {
     display: block;
+    font-size: 36px;
     &::first-letter {
       color: $theme-color;
     }
