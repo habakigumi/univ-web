@@ -23,6 +23,8 @@
 
 div.about-container {
   display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
   margin-top: 51px;
 
   img {
@@ -30,7 +32,6 @@ div.about-container {
   }
 
   div.sentence-outer {
-    margin-left: 110px;
 
     div.sentence {
       display: flex;
