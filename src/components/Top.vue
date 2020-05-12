@@ -5,12 +5,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Top'
-}
-</script>
-
 <style scoped lang="scss">
 @import "../stylesheets/variables";
 
@@ -41,7 +35,6 @@ div.top {
 @media screen and (max-width: $break-point) {
   div.top {
     div.img {
-      /*width: 100vw;*/
       height: 180px;
     }
 
