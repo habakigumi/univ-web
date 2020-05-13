@@ -21,11 +21,9 @@ div.top {
     color: $black;
     line-height: 52px;
     position: absolute;
-    display: inline-block;
     margin: 0;
-    top: 100%;
-    left: 100%;
-    transform: translate(-100%, -100%);
+    right: 0;
+    bottom: 0;
     font-size: 36px;
     font-weight: 900;
     white-space: nowrap;
@@ -34,15 +32,18 @@ div.top {
 
 @media screen and (max-width: $break-point) {
   div.top {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+
     div.img {
+      width: 100%;
       height: 180px;
     }
 
     p {
-      text-align: center;
-      top: 75%;
+      top: 50%;
       left: 50%;
-      transform: translate(-50%, -75%);
+      transform: translate(-50%, -50%);
       font-size: 24px;
       line-height: 35px;
     }
