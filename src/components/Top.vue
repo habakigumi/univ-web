@@ -41,9 +41,11 @@ div.top {
     }
 
     p {
-      top: 50%;
+      width: -moz-fit-content;
+      width: fit-content;
+      top: 75%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -75%);
       font-size: 24px;
       line-height: 35px;
     }
