@@ -1,5 +1,5 @@
 <template>
-  <div class="members">
+  <div class="members" id="members">
     <h2 class="heading_main"><span class="heading__main-text">Members</span></h2>
     <div class="members__member-wrapper">
       <div class="members__member" v-for="(member, index) in members" :key="member.id" :class="`members__member_${mod(index)}`">

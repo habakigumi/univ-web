@@ -46,6 +46,7 @@ html, body, #app {
   margin: 0;
   padding: 0;
   background-color: $background;
+  scroll-behavior: smooth;
 }
 
 #app {
@@ -68,6 +69,7 @@ html, body, #app {
 }
 
 .container {
+  box-sizing: border-box;
   margin: 0 10%;
   width: 80%;
   max-width: 1200px;
@@ -110,6 +112,13 @@ html, body, #app {
     &::first-letter {
       color: $theme-color;
     }
+  }
+}
+
+@media screen and (max-width: $break-point) {
+  .container {
+    margin: 0 5%;
+    width: 90%;
   }
 }
 </style>
