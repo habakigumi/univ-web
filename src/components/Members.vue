@@ -1,13 +1,30 @@
 <template>
   <div class="members" id="members">
-    <h2 class="heading_main"><span class="heading__main-text">Members</span></h2>
+    <h2 class="heading_main">
+      <span class="heading__main-text">Members</span>
+    </h2>
     <div class="members__member-wrapper">
-      <div class="members__member" v-for="(member, index) in members" :key="member.id" :class="`members__member_${mod(index)}`">
-        <div class="members__thumb"><img src="../assets/logo.png" class="members__thumb-image" :alt="member.name"/></div>
+      <div
+        class="members__member"
+        v-for="(member, index) in members"
+        :key="member.id"
+        :class="`members__member_${mod(index)}`"
+      >
+        <div class="members__thumb">
+          <img
+            :src="member.image"
+            class="members__thumb-image"
+            :class="`members__thumb-image_${member.attribute}`"
+            :alt="member.name"
+          />
+        </div>
         <div class="members__member-info">
           <div class="members__id" :class="`members__id_${mod(index)}`">{{ member.id }}</div>
-          <div class="members__name"  :class="`members__name_${mod(index)}`">{{ member.name }}</div>
-          <div class="members__position" :class="`members__position_${mod(index)}`">{{ member.position }}</div>
+          <div class="members__name" :class="`members__name_${mod(index)}`">{{ member.name }}</div>
+          <div
+            class="members__position"
+            :class="`members__position_${mod(index)}`"
+          >{{ member.position }}</div>
         </div>
       </div>
     </div>
@@ -15,19 +32,19 @@
 </template>
 
 <script>
-import { members } from '../utils/members'
+import { members } from "../utils/members";
 export default {
-  data () {
+  data() {
     return {
       members: members
-    }
+    };
   },
   methods: {
-    mod (index) {
-      return index % 2 ? 'even' : 'odd'
+    mod(index) {
+      return index % 2 ? "even" : "odd";
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -55,22 +72,29 @@ export default {
     font-weight: 900;
 
     &_odd {
-      background-image: url('../assets/member_bg.svg')
+      background-image: url("../assets/member_bg.svg");
     }
 
     &_even {
-      background-image: url('../assets/member_bg_alt.svg')
+      background-image: url("../assets/member_bg_alt.svg");
     }
   }
 
   &__thumb {
     width: 168px;
     line-height: 100%;
+    flex-shrink: 0;
   }
 
   &__thumb-image {
-    height: 100%;
+    margin: -7px 0;
+    height: calc(100% + 14px);
     object-fit: contain;
+    color: $background_transparent;
+
+    &_rounded {
+      border-radius: 15px;
+    }
   }
 
   &__member-info {
@@ -103,13 +127,13 @@ export default {
   }
 
   &__position {
-    align-self: end;
+    align-self: flex-end;
 
     &_odd {
       color: $background_transparent;
     }
 
-    &_even{
+    &_even {
       color: $sub;
     }
   }
