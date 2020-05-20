@@ -27,33 +27,33 @@
 </template>
 
 <script>
-import mushamaru from "@/assets/images/mushamaru_1.png";
-import tsumugi from "@/assets/images/tsumugi_1.png";
+import mushamaru from '@/assets/images/mushamaru_1.png'
+import tsumugi from '@/assets/images/tsumugi_1.png'
 
 export default {
-  data() {
+  data () {
     return {
       characters: [
         {
-          key: "tsumugi",
-          name: "天ノ葉 つむぎ",
-          eng_name: "Tsumugi Amanoha",
+          key: 'tsumugi',
+          name: '天ノ葉 つむぎ',
+          eng_name: 'Tsumugi Amanoha',
           image: tsumugi,
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum in at curabitur dolor, metus, purus nulla faucibus. Eu sit ultrices vulputate velit, habitant faucibus tortor cras. Eu sed iaculis et potenti aliquam dictum. Sed risus imperdiet eu leo sed."
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum in at curabitur dolor, metus, purus nulla faucibus. Eu sit ultrices vulputate velit, habitant faucibus tortor cras. Eu sed iaculis et potenti aliquam dictum. Sed risus imperdiet eu leo sed.'
         },
         {
-          key: "mushamaru",
-          name: "武者丸",
-          eng_name: "Mushamaru",
+          key: 'mushamaru',
+          name: '武者丸',
+          eng_name: 'Mushamaru',
           image: mushamaru,
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum in at curabitur dolor, metus, purus nulla faucibus. Eu sit ultrices vulputate velit, habitant faucibus tortor cras. Eu sed iaculis et potenti aliquam dictum. Sed risus imperdiet eu leo sed."
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum in at curabitur dolor, metus, purus nulla faucibus. Eu sit ultrices vulputate velit, habitant faucibus tortor cras. Eu sed iaculis et potenti aliquam dictum. Sed risus imperdiet eu leo sed.'
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
