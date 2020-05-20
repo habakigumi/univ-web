@@ -20,6 +20,23 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../stylesheets/variables";
 
+.links {
+  .link_icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    a {
+      font-size: 100px;
+      color: $black;
+    }
+    @media screen and (max-width: $break-point) {
+      a {
+        font-size: 60px;
+      }
+    }
+  }
+}
 </style>
