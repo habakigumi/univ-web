@@ -1,6 +1,8 @@
 <template>
   <div class="activities" id="activities">
-    <h2 class="heading_main"><span class="heading__main-text">Activities</span></h2>
+    <h2 class="heading_main">
+      <span class="heading__main-text">Activities</span>
+    </h2>
     <div class="activities__timeline">
       <div
         class="activities__activity"
@@ -8,9 +10,15 @@
         :key="`time-${index}`"
         :class="activityClass(activity.type, index)"
       >
-        <div class="activities__time" :class="`activities__time_${activity.type}`">{{ activity.time }}</div>
-        <div class="activities__activity-content" :class="activityContentClass(activity.type)" v-html="activity.content">
-        </div>
+        <div
+          class="activities__time"
+          :class="`activities__time_${activity.type}`"
+        >{{ activity.time }}</div>
+        <div
+          class="activities__activity-content"
+          :class="activityContentClass(activity.type)"
+          v-html="activity.content"
+        ></div>
       </div>
     </div>
   </div>
@@ -30,7 +38,11 @@ export default {
       this.activities.forEach(year => {
         val.push({ time: year.year, content: '', type: 'year' })
         year.activities.forEach(activity => {
-          val.push({ time: activity.month, content: activity.content, type: 'month' })
+          val.push({
+            time: activity.month,
+            content: activity.content,
+            type: 'month'
+          })
         })
       })
       return val
@@ -51,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'src/stylesheets/variables.scss';
+@import "src/stylesheets/variables.scss";
 
 .activities {
   &__timeline {
@@ -71,7 +83,7 @@ export default {
     }
 
     &_first {
-      margin-top: -38px;
+      margin-top: -48px;
     }
   }
   &__time {
@@ -96,12 +108,12 @@ export default {
       &::before {
         position: absolute;
         right: -10px;
-        content: '●';
+        content: "●";
         font-size: 16px;
       }
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         width: 44px;
@@ -120,16 +132,17 @@ export default {
     align-items: center;
 
     &_none {
-      content: '';
+      content: "";
     }
 
     &:not(&_none) {
       min-height: 3em;
 
-      &::before, &::after {
+      &::before,
+      &::after {
         position: absolute;
         top: -20%;
-        content: '';
+        content: "";
         width: 40px;
         height: 140%;
         border-top: 1px solid $sub;
@@ -156,9 +169,15 @@ export default {
 
 @media screen and (max-width: $break-point) {
   .activities {
+    &__activity {
+      &_first {
+        margin-top: -38px;
+      }
+    }
+
     &__time {
       margin-left: -16px;
-      width: calc(35% + 10px);
+      width: calc(35% + 15px);
       &_year {
         font-size: 24px;
         padding: 15px 10px 16px 0;
@@ -169,12 +188,13 @@ export default {
       }
     }
     &__activity-content {
-      width: calc(85% - 10px);
+      width: calc(85% - 15px);
       font-size: 15px;
       &:not(&_none) {
         min-height: 4em;
 
-        &::before, &::after {
+        &::before,
+        &::after {
           top: -5%;
           height: 110%;
         }
@@ -182,5 +202,4 @@ export default {
     }
   }
 }
-
 </style>
