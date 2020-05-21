@@ -2,13 +2,13 @@
   <div class="links" id="links">
     <h2 class="heading_main"><span class="heading__main-text">Link</span></h2>
     <div class="link_icons">
-      <a href="https://fjpj2020.blogspot.com/" target="_blank">
+      <a href="https://fjpj2020.blogspot.com/" target="_blank" rel="noopener noreferrer">
         <font-awesome-icon :icon="['fab', 'blogger']" />
       </a>
-      <a href="https://twitter.com/nevpj" target="_blank">
+      <a href="https://twitter.com/nevpj" target="_blank" rel="noopener noreferrer">
         <font-awesome-icon :icon="['fab', 'twitter-square']" />
       </a>
-      <a href="#" target="_blank">
+      <a href="#" target="_blank" rel="noopener noreferrer">
         <font-awesome-icon :icon="['fab', 'youtube-square']" />
       </a>
     </div>
