@@ -14,6 +14,6 @@ export const members = [
   new Member('NE30-0223A', 'うさ', 'creator', 'usa.png'),
   new Member('NE30-0228B', 'haru', 'creator', 'haru.png'),
   new Member('NE30-0229K', 'めがね', 'developer', 'megane.png'),
-  new Member('NE30-0249B', 'いろはす', 'planner', 'irohasu.jpg'),
+  new Member('NE30-0249B', 'いろはす', 'planner', 'irohasu.png'),
   new Member('担当教員', '藤原 正仁', 'teacher', 'fuji.png')
 ]
