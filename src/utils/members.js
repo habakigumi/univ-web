@@ -1,14 +1,13 @@
 class Member {
-  constructor(id, name, position, thumb) {
+  constructor (id, name, position, thumb) {
     [this.id, this.name, this.position, this.thumb] = [id, name, position, thumb]
     this.image = thumb ? require('@/assets/members/' + thumb) : ''
     this.attribute = ['fuji.png'].includes(this.thumb) ? 'rounded' : ''
-    return this
   }
 }
 export const members = [
   new Member('NE30-0006C', 'H0L1C', 'creator', 'H0L1C.png'),
-  new Member('NE30-0085F', 'Taisei', 'developer', 'tomaito.png'),
+  new Member('NE30-0085F', 'Taisei', 'developer', 'tomeito.png'),
   new Member('NE30-0105K', 'あおき', 'creator', 'aoki.png'),
   new Member('NE30-0206B', 'Kentaro', 'planner', 'Kentaro.png'),
   new Member('NE30-0209G', 'taichan', 'developer', 'taichan.svg'),

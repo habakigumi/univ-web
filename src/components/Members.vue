@@ -32,19 +32,19 @@
 </template>
 
 <script>
-import { members } from "../utils/members";
+import { members } from '../utils/members'
 export default {
-  data() {
+  data () {
     return {
       members: members
-    };
+    }
   },
   methods: {
-    mod(index) {
-      return index % 2 ? "even" : "odd";
+    mod (index) {
+      return index % 2 ? 'even' : 'odd'
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
