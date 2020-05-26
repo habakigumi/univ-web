@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     mod (index) {
-      return index % 2 ? 'even' : 'odd'
+      return index % 2 ? 'odd' : 'even'
     }
   }
 }
@@ -71,11 +71,11 @@ export default {
     padding: 8px;
     font-weight: 900;
 
-    &_odd {
+    &_even {
       background-image: url("../assets/member_bg.svg");
     }
 
-    &_even {
+    &_odd {
       background-image: url("../assets/member_bg_alt.svg");
     }
   }
@@ -105,10 +105,10 @@ export default {
   }
 
   &__id {
-    &_odd {
+    &_even {
       color: $background_transparent;
     }
-    &_even {
+    &_odd {
       color: $sub;
     }
   }
@@ -117,11 +117,11 @@ export default {
     margin-left: 20%;
     font-size: 36px;
 
-    &_odd {
+    &_even {
       color: $background;
     }
 
-    &_even {
+    &_odd {
       color: $black;
     }
   }
@@ -129,11 +129,11 @@ export default {
   &__position {
     align-self: flex-end;
 
-    &_odd {
+    &_even {
       color: $background_transparent;
     }
 
-    &_even {
+    &_odd {
       color: $sub;
     }
   }
