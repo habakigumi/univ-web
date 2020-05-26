@@ -1,0 +1,19 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: cd ./public_html && git pull origin gh-pages
