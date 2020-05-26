@@ -131,7 +131,7 @@ body,
     &_main {
       &:before,
       &:after {
-        width: calc(((100% - 24px * 6)) / 2);
+        width: calc((100% - 24px * 6) / 2);
       }
     }
   }
