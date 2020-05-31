@@ -6,11 +6,9 @@
       <div class="sentence-outer">
         <div class="sentence">
           <h3 class="text_sub">プロジェクトについて</h3>
-          <p class="text_black"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Fermentum in at curabitur dolor, metus, purus nulla
-            <br>
-            faucibus. Eu sit ultrices vulputate velit, habitant <br> faucibus tortor cras. Eu sed iaculis et potenti aliquam
-            <br>
-            dictum. Sed risus imperdiet eu leo sed.
+          <p class="text_black">
+            藤原プロジェクト2020はオリジナルのVTuberを作成し、<br>さまざまなメディアでの展開を通じてその表現や技術を探求していくことで
+            <br>活用について検討していくことを目的としたプロジェクトです。
           </p>
         </div>
       </div>
@@ -28,7 +26,7 @@ div.about-container {
   margin-top: 51px;
 
   img {
-    width: 333px;
+    width: 50%;
   }
 
   div.sentence-outer {
@@ -55,9 +53,11 @@ div.about-container {
     display: block;
     border: 1px solid $sub;
     margin-top: 31px;
+    text-align: center;
 
     img {
-      width: 100%;
+      width: 70%;
+      /*margin: 0 auto;*/
     }
 
     div.sentence-outer {
