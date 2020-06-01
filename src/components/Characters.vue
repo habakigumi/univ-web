@@ -40,7 +40,9 @@ export default {
           eng_name: 'Tsumugi Amanoha',
           image: tsumugi,
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum in at curabitur dolor, metus, purus nulla faucibus. Eu sit ultrices vulputate velit, habitant faucibus tortor cras. Eu sed iaculis et potenti aliquam dictum. Sed risus imperdiet eu leo sed.'
+            'とある神社の家系に生まれた一人娘。\n' +
+            '好きなこと・新しいものに目がない。\n' +
+            'これまで、危ないという理由から「神社の敷地から、1人で出てはいけない」と言われて育ったが、好奇心が抑えられず、親の言いつけを破ってしまう。'
         },
         {
           key: 'mushamaru',
@@ -48,7 +50,9 @@ export default {
           eng_name: 'Mushamaru',
           image: mushamaru,
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum in at curabitur dolor, metus, purus nulla faucibus. Eu sit ultrices vulputate velit, habitant faucibus tortor cras. Eu sed iaculis et potenti aliquam dictum. Sed risus imperdiet eu leo sed.'
+            '封印されていた神獣。\n' +
+            'これまでつむぎのぬいぐるみとして扱われており、どこにいくにも一緒だった。\n' +
+            '今回つむぎが起こした行動に言いたいことはたくさんあるが、なんだかんだ言って放っておけない優しい一面も持つ。'
         }
       ]
     }
