@@ -91,6 +91,7 @@ export default {
     height: calc(100% + 14px);
     object-fit: contain;
     color: $background_transparent;
+    float: left;
 
     &_rounded {
       border-radius: 15px;
