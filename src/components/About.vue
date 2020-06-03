@@ -7,8 +7,8 @@
         <div class="sentence">
           <h3 class="text_sub">プロジェクトについて</h3>
           <p class="text_black">
-            藤原プロジェクト2020はオリジナルのVTuberを作成し、<br>さまざまなメディアでの展開を通じてその表現や技術を探求していくことで
-            <br>活用について検討していくことを目的としたプロジェクトです。
+            藤原プロジェクト2020はオリジナルのVirtual YouTuberを作成し、<br/>さまざまなメディアでの展開を通じてその表現や技術を探求していくことで、
+            活用について検討することを目的としたプロジェクトです。
           </p>
         </div>
       </div>
@@ -21,12 +21,12 @@
 
 div.about-container {
   display: flex;
-  flex-flow: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 51px;
 
   img {
-    width: 50%;
+    margin-right: 110px;
+    width: 45%;
   }
 
   div.sentence-outer {
@@ -56,8 +56,8 @@ div.about-container {
     text-align: center;
 
     img {
-      width: 70%;
-      /*margin: 0 auto;*/
+      width: 100%;
+      margin: 0 auto;
     }
 
     div.sentence-outer {
@@ -69,7 +69,7 @@ div.about-container {
         display: inline-block;
         text-align: left;
         p {
-          margin-top: 15px;
+          margin: 15px 0;
         }
       }
     }
