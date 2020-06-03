@@ -2,7 +2,7 @@
   <div class="about">
     <h2 class="heading_main"><span class="heading__main-text">About</span></h2>
     <div class="about-container">
-      <img src="../assets/logo.png" alt="logo">
+      <img src="../assets/about.png" alt="logo">
       <div class="sentence-outer">
         <div class="sentence">
           <h3 class="text_sub">プロジェクトについて</h3>
