@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about" id="about">
     <h2 class="heading_main"><span class="heading__main-text">About</span></h2>
     <div class="about-container">
       <img src="../assets/about.png" alt="logo">

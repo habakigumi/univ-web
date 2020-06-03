@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <main class="container">
-      <Top/>
+      <Top />
       <About />
       <Characters />
       <Members />
@@ -39,9 +39,11 @@ export default {
 
 <style lang="scss">
 @import "stylesheets/variables";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;900&display=swap");
 
-html, body, #app {
+html,
+body,
+#app {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -50,7 +52,7 @@ html, body, #app {
 }
 
 #app {
-  font-family: 'Noto Sans JP', Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans JP", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
@@ -59,7 +61,7 @@ html, body, #app {
   align-items: center;
 }
 
-.text{
+.text {
   &_black {
     color: $black;
   }
@@ -69,6 +71,7 @@ html, body, #app {
 }
 
 .container {
+  box-sizing: border-box;
   margin: 0 10%;
   width: 80%;
   max-width: 1200px;
@@ -87,8 +90,9 @@ html, body, #app {
       color: $theme-color;
     }
 
-    &:before, &:after {
-      content: '';
+    &:before,
+    &:after {
+      content: "";
       position: absolute;
       top: 50%;
       display: inline-block;
@@ -108,8 +112,27 @@ html, body, #app {
 
   &__main-text {
     display: block;
+    font-size: 36px;
     &::first-letter {
       color: $theme-color;
+    }
+  }
+}
+
+@media screen and (max-width: $break-point) {
+  .container {
+    margin: 0 5%;
+    width: 90%;
+  }
+  .heading {
+    &__main-text {
+      font-size: 24px;
+    }
+    &_main {
+      &:before,
+      &:after {
+        width: calc((100% - 24px * 6) / 2);
+      }
     }
   }
 }
