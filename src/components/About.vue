@@ -2,7 +2,9 @@
   <div class="about">
     <h2 class="heading_main"><span class="heading__main-text">About</span></h2>
     <div class="about-container">
-      <img src="../assets/about.png" alt="logo">
+      <div class="image">
+        <img src="../assets/about.png" alt="logo">
+      </div>
       <div class="sentence-outer">
         <div class="sentence">
           <h3 class="text_sub">プロジェクトについて</h3>
@@ -24,9 +26,11 @@ div.about-container {
   justify-content: space-between;
   margin-top: 51px;
 
-  img {
-    margin-right: 110px;
-    width: 45%;
+  div.image {
+    line-height: 1;
+    img {
+      width: 75%;
+    }
   }
 
   div.sentence-outer {
@@ -55,9 +59,11 @@ div.about-container {
     margin-top: 31px;
     text-align: center;
 
-    img {
-      width: 100%;
-      margin: 0 auto;
+    div.image {
+      img {
+        width: 100%;
+      }
+      margin-bottom: 8px;
     }
 
     div.sentence-outer {
