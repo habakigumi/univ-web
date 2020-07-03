@@ -6,8 +6,10 @@ on:
       - feature/*
       - fix/*
       - hotfix/*
-      - dependabot/*
       - develop
+  pull_request:
+    branches: 
+      - dependabot/*
 
 jobs:
   lint:
