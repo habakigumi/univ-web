@@ -6,6 +6,7 @@ on:
       - feature/*
       - fix/*
       - hotfix/*
+      - dependabot/*
       - develop
 
 jobs:
