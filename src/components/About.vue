@@ -2,15 +2,15 @@
   <div class="about" id="about">
     <h2 class="heading_main"><span class="heading__main-text">About</span></h2>
     <div class="about-container">
-      <img src="../assets/logo.png" alt="logo">
+      <div class="image">
+        <img src="../assets/about.png" alt="logo">
+      </div>
       <div class="sentence-outer">
         <div class="sentence">
           <h3 class="text_sub">プロジェクトについて</h3>
-          <p class="text_black"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Fermentum in at curabitur dolor, metus, purus nulla
-            <br>
-            faucibus. Eu sit ultrices vulputate velit, habitant <br> faucibus tortor cras. Eu sed iaculis et potenti aliquam
-            <br>
-            dictum. Sed risus imperdiet eu leo sed.
+          <p class="text_black">
+            藤原プロジェクト2020はオリジナルのVirtual YouTuberを作成し、<br/>さまざまなメディアでの展開を通じてその表現や技術を探求していくことで、
+            活用について検討することを目的としたプロジェクトです。
           </p>
         </div>
       </div>
@@ -23,12 +23,14 @@
 
 div.about-container {
   display: flex;
-  flex-flow: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 51px;
 
-  img {
-    width: 333px;
+  div.image {
+    line-height: 1;
+    img {
+      width: 75%;
+    }
   }
 
   div.sentence-outer {
@@ -55,9 +57,13 @@ div.about-container {
     display: block;
     border: 1px solid $sub;
     margin-top: 31px;
+    text-align: center;
 
-    img {
-      width: 100%;
+    div.image {
+      img {
+        width: 100%;
+      }
+      margin-bottom: 8px;
     }
 
     div.sentence-outer {
@@ -69,7 +75,7 @@ div.about-container {
         display: inline-block;
         text-align: left;
         p {
-          margin-top: 15px;
+          margin: 15px 0;
         }
       }
     }

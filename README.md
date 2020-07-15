@@ -1,5 +1,5 @@
 # univ-web
-
+![eslint](https://github.com/habakigumi/univ-web/workflows/eslint/badge.svg?branch=develop)
 ## Project setup
 ```
 yarn install
