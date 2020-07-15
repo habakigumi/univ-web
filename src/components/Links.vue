@@ -8,7 +8,7 @@
       <a href="https://twitter.com/nevpj" target="_blank">
         <font-awesome-icon :icon="['fab', 'twitter-square']" />
       </a>
-      <a href="#" target="_blank">
+      <a href="https://www.youtube.com/channel/UC6sjImHi5w_9mVVfkXauF3g" target="_blank">
         <font-awesome-icon :icon="['fab', 'youtube-square']" />
       </a>
     </div>
