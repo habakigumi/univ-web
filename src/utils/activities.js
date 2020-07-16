@@ -12,7 +12,7 @@ export const activities = [
       },
       {
         month: '07',
-        content: '初回動画を投稿'
+        content: '初回動画を投稿。'
       }
     ]
   }
