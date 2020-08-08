@@ -14,7 +14,7 @@
           <font-awesome-icon :icon="['fab', 'twitter']" class="icon" transform="shrink-5" />
         </font-awesome-layers>
       </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.youtube.com/channel/UC6sjImHi5w_9mVVfkXauF3g" target="_blank" rel="noopener noreferrer">
         <font-awesome-layers>
           <font-awesome-icon :icon="['fas', 'circle']" />
           <font-awesome-icon :icon="['fab', 'youtube']" class="icon" transform="shrink-5 left-1" />
