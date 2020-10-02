@@ -1,6 +1,6 @@
 <template>
   <div class="top">
-    <div class="img"></div>
+    <img src="@/assets/images/jinja.jpg" alt="神社">
     <p>可能性を<br>「そうぞう」してみよう。</p>
   </div>
 </template>
@@ -11,14 +11,14 @@
 div.top {
   position: relative;
 
-  div.img {
-    background: #c4c4c4;
+  img {
     width: 100%;
     height: 400px;
+    object-fit: cover;
   }
 
   p {
-    color: $black;
+    color: $background;
     line-height: 52px;
     position: absolute;
     margin: 0;
@@ -35,9 +35,10 @@ div.top {
     width: 100vw;
     margin: 0 calc(50% - 50vw);
 
-    div.img {
+    img {
       width: 100%;
       height: 180px;
+      object-fit: cover;
     }
 
     p {
