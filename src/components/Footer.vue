@@ -1,6 +1,5 @@
 <template>
   <footer>
-    <hr />
     <p>&copy;2020 藤原プロジェクト All Rights Reserved</p>
   </footer>
 </template>
@@ -9,11 +8,10 @@
 @import "../stylesheets/variables";
 
 footer {
-  hr {
-    width: 100vw;
-    height: 0px;
-    border: 1px solid $sub_transparent;
-  }
+  border-top: 2px solid $sub_transparent;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   p {
     font-weight: 900;
     color: $sub_transparent;
