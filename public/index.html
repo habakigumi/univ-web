@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+  <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="theme-color" content="#C3D825">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@nevpj">
+    <meta name="twitter:creater" content="@nevpj">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>">
+    <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.title %>">
+    <meta name="description" content="専修大学ネットワーク情報学部の2020年度藤原プロジェクトです。">
+    <meta property="og:description" content="可能性を「そうぞう」してみよう。">
+    <meta property="og:url" content="https://www.ne.senshu-u.ac.jp/~proj2020-23/">
+    <meta property="og:image" content="http://www.ne.senshu-u.ac.jp/~proj2020-23/OGP.png">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154581637-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-154581637-2');
+    </script>
   </head>
   <body>
     <noscript>

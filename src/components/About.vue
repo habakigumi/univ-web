@@ -2,15 +2,17 @@
   <div class="about" id="about">
     <h2 class="heading_main"><span class="heading__main-text">About</span></h2>
     <div class="about-container">
-      <img src="../assets/logo.png" alt="logo">
-      <div class="sentence">
-        <h3 class="text_sub">プロジェクトについて</h3>
-        <p class="text_black"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Fermentum in at curabitur dolor, metus, purus nulla
-          <br>
-          faucibus. Eu sit ultrices vulputate velit, habitant <br> faucibus tortor cras. Eu sed iaculis et potenti aliquam
-          <br>
-          dictum. Sed risus imperdiet eu leo sed.
-        </p>
+      <div class="image">
+        <img src="../assets/about.png" alt="logo">
+      </div>
+      <div class="sentence-outer">
+        <div class="sentence">
+          <h3 class="text_sub">プロジェクトについて</h3>
+          <p class="text_black">
+            藤原プロジェクト2020はオリジナルのVirtual YouTuberを作成し、<br/>さまざまなメディアでの展開を通じてその表現や技術を探求していき、
+            活用について検討することを目的としたプロジェクトです。
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -21,24 +23,31 @@
 
 div.about-container {
   display: flex;
+  justify-content: space-between;
   margin-top: 51px;
 
-  img {
-    width: 333px;
+  div.image {
+    line-height: 1;
+    img {
+      width: 75%;
+    }
   }
 
-  div.sentence {
-    display: flex;
-    flex-direction: column;
-    margin-left: 110px;
+  div.sentence-outer {
 
-    h3 {
-      margin: 0;
-      font-size: 24px;
-    }
+    div.sentence {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
 
-    p {
-      margin: auto 0;
+      h3 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      p {
+        margin: auto 0;
+      }
     }
   }
 }
@@ -48,17 +57,26 @@ div.about-container {
     display: block;
     border: 1px solid $sub;
     margin-top: 31px;
+    text-align: center;
 
-    img {
-      width: 100%;
+    div.image {
+      img {
+        width: 100%;
+      }
+      margin-bottom: 8px;
     }
 
-    div.sentence {
+    div.sentence-outer {
       margin: 0 auto;
       width: 95%;
+      text-align: center;
 
-      p {
-        margin-top: 15px;
+      div.sentence {
+        display: inline-block;
+        text-align: left;
+        p {
+          margin: 15px 0;
+        }
       }
     }
   }
