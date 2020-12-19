@@ -5,6 +5,7 @@
       <Top />
       <About />
       <Characters />
+      <Works />
       <Members />
       <Activities />
       <Links />
@@ -18,6 +19,7 @@ import Header from './components/Header'
 import Top from './components/Top'
 import About from './components/About'
 import Characters from './components/Characters'
+import Works from './components/Works'
 import Members from './components/Members'
 import Activities from './components/Activities'
 import Links from './components/Links'
@@ -29,6 +31,7 @@ export default {
     Top,
     About,
     Characters,
+    Works,
     Members,
     Activities,
     Links,
