@@ -82,7 +82,6 @@ export default {
     }
     iframe {
       width: 90%;
-      
     }
   }
 }
