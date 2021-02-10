@@ -21,6 +21,10 @@ export const activities = [
       {
         month: '10',
         content: '初配信を行う。'
+      },
+      {
+        month: '12',
+        content: '最終発表を実施。'
       }
     ]
   }
