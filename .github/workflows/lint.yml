@@ -3,13 +3,13 @@ name: eslint
 on:
   push:
     branches:
-      - feature/*
-      - fix/*
-      - hotfix/*
+      - feature/**
+      - fix/**
+      - hotfix/**
       - develop
   pull_request:
     branches: 
-      - dependabot/*
+      - dependabot/**
 
 jobs:
   lint:
