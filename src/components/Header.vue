@@ -77,7 +77,6 @@ h1 {
 nav {
   font-size: 24px;
   font-weight: bold;
-  width: 542px;
   margin-right: 24px;
 
   div.menu {
@@ -88,6 +87,8 @@ nav {
       list-style: none;
 
       li {
+        margin-left: 8px;
+
         a {
           text-decoration: none;
           padding-bottom: 3.25px;
@@ -188,6 +189,7 @@ nav {
         li {
           width: 200px;
           margin-top: 20px;
+          margin-left: 0;
           text-align: center;
 
           &:nth-of-type(1) {
