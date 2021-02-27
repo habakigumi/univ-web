@@ -8,6 +8,7 @@
         <ul>
           <li><a href="#about" class="text_sub" @click="toggleMenu">About</a></li>
           <li><a href="#characters" class="text_sub" @click="toggleMenu">Character</a></li>
+          <li><a href="#works" class="text_sub" @click="toggleMenu">Works</a></li>
           <li><a href="#members" class="text_sub" @click="toggleMenu">Member</a></li>
           <li><a href="#activities" class="text_sub" @click="toggleMenu">Activities</a></li>
           <li><a href="#links" class="text_sub" @click="toggleMenu">Link</a></li>
