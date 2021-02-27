@@ -9,18 +9,18 @@
 <script>
 export default {
   name: 'MenuButton',
-  data() {
+  data () {
     return {
       opened: false
     }
   },
   computed: {
-    menu_button_class() {
+    menu_button_class () {
       return this.opened ? 'menu-button-opened' : ''
     }
   },
   methods: {
-    onClick() {
+    onClick () {
       this.opened = !this.opened
       this.$emit('toggle', this.opened)
     }

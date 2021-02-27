@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import menuButton from "../utils/menu_button";
+import menuButton from '../utils/menu_button'
 export default {
   components: {
     menuButton
