@@ -85,7 +85,7 @@
           一年間の活動の記録をまとめた本を制作しました。
           印刷用に制作したデータをインターネット上で公開するために再編集したPDFファイルを公開しています。<br>
           見開き表示での閲覧を推奨しています。<br>
-          DLは <a href="../assets/download/HabakiBook_Interactive.pdf" download="藤原プロジェクト2020制作記録本「VTuberの制作と技術」">こちら</a> 
+          DLは <a href="../assets/download/HabakiBook_Interactive.pdf" download="藤原プロジェクト2020制作記録本「VTuberの制作と技術」">こちら</a>
           (PDFファイルがダウンロードされます)
         </p>
       </div>
