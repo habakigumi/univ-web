@@ -70,11 +70,27 @@
         <h3 class="text_sub">LINEスタンプ</h3>
         <p class="text_black">
           つむぎと武者丸のLINEスタンプを制作しました。描き下ろしイラスト40種入りです。<br>
-          その他のイラスト確認・購入は<a href="https://store.line.me/stickershop/product/14343630" target="_blank" rel="noopener noreferrer">こちら</a>
+          その他のイラスト確認・購入は <a href="https://store.line.me/stickershop/product/14343630" target="_blank" rel="noopener noreferrer">こちら</a>
         </p>
       </div>
       <div class="image">
         <img src="../assets/images/promotion_LINE.png">
+      </div>
+    </div>
+
+    <div class="works_container">
+      <div class="text">
+        <h3 class="text_sub">制作記録本「VTuberの制作と技術」</h3>
+        <p class="text_black">
+          一年間の活動の記録をまとめた本を制作しました。
+          印刷用に制作したデータをインターネット上で公開するために再編集したPDFファイルを公開しています。<br>
+          見開き表示での閲覧を推奨しています。<br>
+          DLは <a href="../assets/download/HabakiBook_Interactive.pdf" download="藤原プロジェクト2020制作記録本「VTuberの制作と技術」">こちら</a> 
+          (PDFファイルがダウンロードされます)
+        </p>
+      </div>
+      <div class="image">
+        <img src="../assets/images/book.png">
       </div>
     </div>
 
@@ -96,7 +112,7 @@ export default {
     justify-content: space-between;
     margin-bottom: 40px;
     .image {
-      flex-basis: 60%;
+      flex-basis: 50%;
       height: 315px;
       iframe {
         height: 100%;
@@ -110,7 +126,7 @@ export default {
     }
     .text {
       display: block;
-      flex-basis: 40%;
+      flex-basis: 50%;
       padding: 4%;
 
       h3 {
