@@ -9,7 +9,7 @@ on:
       - develop
   pull_request:
     branches: 
-      - dependabot/*+
+      - dependabot/**
 
 jobs:
   lint:
