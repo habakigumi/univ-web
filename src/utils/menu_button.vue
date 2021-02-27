@@ -76,7 +76,7 @@ export default {
       }
 
       &-2 {
-        top: calc(50% - 1px);
+        top: 50%;
       }
 
       &-3 {
