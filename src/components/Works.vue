@@ -40,19 +40,6 @@
 
     <div class="works_container">
       <div class="text">
-        <h3 class="text_sub">公式ウェブサイト</h3>
-        <p class="text_black">
-          つむぎと武者丸を世界に発信するため、キャラクターやコンテンツの紹介により重点をおいた公式ウェブサイトを制作しています。<br>
-          アクセスは <a href="https://habakigumi.netlify.app/" target="_blank" rel="noopener noreferrer">こちら</a>
-        </p>
-      </div>
-      <div class="image">
-        <img src="../assets/images/logo.png">
-      </div>
-    </div>
-
-    <div class="works_container">
-      <div class="text">
         <h3 class="text_sub">オリジナルグッズ</h3>
         <p class="text_black">
           つむぎと武者丸のキャラクターグッズを販売しています。
