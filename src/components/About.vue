@@ -12,6 +12,11 @@
             藤原プロジェクト2020はオリジナルのVirtual YouTuberを作成し、<br/>さまざまなメディアでの展開を通じてその表現や技術を探求していき、
             活用について検討することを目的としたプロジェクトです。
           </p>
+          <p class="text_black">
+            現在は大学のプロジェクト・卒業演習としての活動を終え、「鈨組」として活動をしています。<br />
+            最新の「むぎむしゃ」情報やお問い合わせは、<a href="https://habakigumi.netlify.app">鈨組公式HP</a>から！<br />
+            ※本活動について専修大学及びネットワーク情報学部へのお問い合わせはご遠慮ください。
+          </p>
         </div>
       </div>
     </div>
@@ -22,6 +27,7 @@
 @import "../stylesheets/variables";
 
 div.about-container {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   margin-top: 51px;
@@ -46,7 +52,7 @@ div.about-container {
       }
 
       p {
-        margin: auto 0;
+        margin: 10px 0;
       }
     }
   }
@@ -75,7 +81,7 @@ div.about-container {
         display: inline-block;
         text-align: left;
         p {
-          margin: 15px 0;
+          margin: 10px 0;
         }
       }
     }
