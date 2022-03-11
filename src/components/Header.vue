@@ -14,24 +14,23 @@
           <li><a href="#links" class="text_sub" @click="toggleMenu">Link</a></li>
         </ul>
       </div>
-      <div class="hamburger-icon" @click="toggleMenu" ref="hamburgerIcon">
-        <span/>
-        <span/>
-        <span/>
-      </div>
+      <menu-button ref="menuButton" @toggle="toggleMenu"></menu-button>
     </nav>
   </header>
 </template>
 
 <script>
+import menuButton from '../utils/menu_button'
 export default {
+  components: {
+    menuButton
+  },
   methods: {
     toggleMenu: function () {
       if (window.innerWidth > 979) {
         return
       }
       this.$refs.menu.classList.toggle('hamburger-open')
-      this.$refs.hamburgerIcon.classList.toggle('close')
     }
   }
 }
@@ -93,55 +92,6 @@ nav {
           text-decoration: none;
           padding-bottom: 3.25px;
           border-bottom: 0.3px solid $sub;
-        }
-      }
-    }
-  }
-
-  div.hamburger-icon {
-    display: none;
-    position: relative;
-    width: 25px;
-    height: 15px;
-    cursor: pointer;
-    z-index: 99;
-
-    span {
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background: $sub;
-
-      &:nth-of-type(1) {
-        top: 0;
-      }
-
-      &:nth-of-type(2) {
-        top: 7px;
-      }
-
-      &:nth-of-type(3) {
-        bottom: 0;
-      }
-    }
-
-    &.close {
-      height: 26px;
-
-      span {
-        background: $hamburger_text;
-        margin: 0;
-
-        &:nth-of-type(1) {
-          transform: translateY(12.5px) rotate(45deg);
-        }
-
-        &:nth-of-type(2) {
-          display: none;
-        }
-
-        &:nth-of-type(3) {
-          transform: translateY(-12.5px) rotate(-45deg);
         }
       }
     }
